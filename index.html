@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homework1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/tmpl.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<script type="text/template" id="resume">
+
+<div class="cs">
+    <h1><%= name %></h1>
+    <img class="imgCenter" src="img/<%= namephoto %>.JPG" alt="Здесть должно было быть фото">
+    <p class="text2"><%= position%></p>
+    <hr>
+    <h2>Хочу учить фронтенд, потому что:</h2>
+    <ul>
+        <% for (var key in why) { %>
+        <li><%= why[key] %></li>
+        <% }; %>
+    </ul>
+    <hr>
+    <h2>Мой контактный телефон:</h2>
+    <p class="text"><%= phone%></p>
+    <h2>Мой профиль Вконтакте:</h2>
+    <a class="text" href="http://<%= socialnetw %>"><%= socialnetw %></a>
+    <hr>
+    <h2>Мой фидбек:</h2>
+    <p class="text"><%= feedback %></p>
+</div>
+
+</script>
+
+</body>
+</html>
